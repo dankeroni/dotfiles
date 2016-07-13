@@ -1,0 +1,33 @@
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+[user]
+    name = dankeroni
+[user]
+    email = pana99@hotmail.de
+[gui]
+[gui]
+[gui]
+[gui]
+[gui]
+[push]
+    default = simple
+[core]
+    editor = vim
+[core]
+    autocrlf = input
+[commit]
+    gpsign = true
+[web]
+    browser = chrome
+[alias]
+    st = "status"
+    df = "diff"
+    co = "commit"
+    clone = "clone --recursive"
+    cl = "clone"
+    flog = "log -p --follow"
+    up = "fetch upstream"
+[github]
+    user = dankeroni
