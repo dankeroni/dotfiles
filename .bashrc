@@ -92,6 +92,6 @@ if ! shopt -oq posix; then
     fi
 fi
 
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/git/go
+if [ -f ~/.bash_exports ]; then
+    . ~/.bash_exports
+fi
