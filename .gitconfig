@@ -17,6 +17,7 @@
     editor = vim
 [core]
     autocrlf = input
+    excludesfile = ~/.gitignore
 [commit]
     gpsign = true
 [web]
