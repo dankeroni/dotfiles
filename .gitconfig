@@ -23,6 +23,8 @@
 [web]
     browser = chrome
 [alias]
+    commit = "commit -S"
+    tag = "tag -s"
     st = "status"
     df = "diff"
     co = "commit"
