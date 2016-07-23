@@ -4,8 +4,8 @@
     required = true
 [user]
     name = dankeroni
-[user]
     email = pana99@hotmail.de
+    signingkey = 58EB8C3B
 [gui]
 [gui]
 [gui]
@@ -19,17 +19,14 @@
     autocrlf = input
     excludesfile = ~/.gitignore
 [commit]
-    gpsign = true
+    gpgsign = true
 [web]
     browser = chrome
 [alias]
-    commit = "commit -S"
-    tag = "tag -s"
     st = "status"
     df = "diff"
     co = "commit"
-    clone = "clone --recursive"
-    cl = "clone"
+    cl = "clone --recursive"
     flog = "log -p --follow"
     up = "fetch upstream"
 [github]
