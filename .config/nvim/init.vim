@@ -110,6 +110,7 @@ call dein#add('mattn/webapi-vim')
 call dein#add('mattn/gist-vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('itchyny/vim-cursorword')
+call dein#add('Shougo/neomru.vim')
 call dein#add('troydm/asyncfinder.vim')
 call dein#add('nelstrom/vim-markdown-folding')
 call dein#add('tyru/markdown-codehl-onthefly.vim')
@@ -143,4 +144,5 @@ fu! Json()
 endfunction
 
 tnoremap <Esc> <C-\><C-n>
-map! <C-c> <C-x><C-i>
+nnoremap <C-p> :Unite file file_rec buffer file_mru -auto-resize -start-insert<CR>
+nnoremap <C-k> :Unite line -auto-resize -start-insert<CR>
