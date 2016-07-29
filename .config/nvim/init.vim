@@ -136,6 +136,7 @@ let g:deoplete#enable_at_startup = 1
 
 "Clear search highlights
 autocmd VimEnter * nnoremap <C-l> :noh<CR>
+autocmd! BufWritePost * Neomake
 
 let g:airline#extensions#tabline#enabled = 1
 
