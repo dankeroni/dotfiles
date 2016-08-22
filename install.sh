@@ -2,9 +2,9 @@
 
 echo "Installing dankeroni's dotfiles..."
 
-directories=(.config/nvim)
+directories=(.config/nvim .config/awesome)
 files=(.bash_aliases .bash_exports .bashrc .gitconfig .gitignore .profile .config/nvim/init.vim \
-    .tmux.conf)
+    .tmux.conf .config/awesome/rc.lua)
 
 for directory in "${directories[@]}"; do
     mkdir -p ~/$directory
