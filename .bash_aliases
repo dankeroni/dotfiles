@@ -2,7 +2,15 @@ alias pullall="ls -R --directory --color=never */.git | sed 's/\/.git//' | xargs
 alias vim="vim -p"
 alias cv="cd -P"
 alias qwer="youtube-dl -f bestvideo+140"
-asdf() { livestreamer twitch.tv/"$1" best; }
+asdf() {
+    if [ "$2" ]; then
+        quality="$2";
+    else
+        quality="best";
+    fi
+    google-chrome --app="https://www.twitch.tv/"$1"/chat" &>/dev/null || chrome --app="https://www.twitch.tv/"$1"/chat" &>/dev/null;
+    livestreamer twitch.tv/"$1" "$quality";
+}
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
