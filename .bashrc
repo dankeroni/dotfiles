@@ -99,3 +99,8 @@ fi
 if [ -f ~/.bash_exports ]; then
     . ~/.bash_exports
 fi
+
+if ! [ -f ~/.git_prompt.sh ]; then
+    curl -o ~/.git_prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh &> /dev/null
+fi
+. ~/.git_prompt.sh
