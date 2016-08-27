@@ -2,6 +2,7 @@ alias pullall="ls -R --directory --color=never */.git | sed 's/\/.git//' | xargs
 alias vim="vim -p"
 alias cv="cd -P"
 alias qwer="youtube-dl -f bestvideo+140"
+alias ssh-fingerprint="ssh-keygen -l -f"
 asdf() {
     if [ "$2" ]; then
         quality="$2";
