@@ -9,7 +9,9 @@ asdf() {
     else
         quality="best";
     fi
-    google-chrome --app="https://www.twitch.tv/"$1"/chat" &>/dev/null || chrome --app="https://www.twitch.tv/"$1"/chat" &>/dev/null;
+    google-chrome --app="https://www.twitch.tv/"$1"/chat" &>/dev/null ||
+        chrome --app="https://www.twitch.tv/"$1"/chat" &>/dev/null ||
+        chromium --app="https://www.twitch.tv/"$1"/chat" &>/dev/null &
     livestreamer twitch.tv/"$1" "$quality";
 }
 
