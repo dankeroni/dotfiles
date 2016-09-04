@@ -121,6 +121,8 @@ call dein#add('tyru/open-browser.vim')
 call dein#add('ryanoasis/vim-devicons')
 call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
 
+call dein#add('maksimr/vim-jsbeautify')
+
 call dein#end()
 
 filetype plugin indent on
