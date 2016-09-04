@@ -219,6 +219,9 @@ root.buttons(awful.util.table.join(
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("pulseaudio-ctl mute") end),
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up") end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down") end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -464,3 +467,5 @@ end
 run_once("xscreensaver -no-splash")
 run_once("nm-applet")
 run_once("ckb -b")
+run_once("steam -silent")
+run_once("discord-canary")
