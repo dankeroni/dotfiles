@@ -4,3 +4,4 @@ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export GOPATH=$HOME/git/go
 export PATH=$PATH:$GOPATH/bin
 export GPG_TTY=$(tty)
+export EDITOR=nvim
