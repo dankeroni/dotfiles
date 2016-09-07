@@ -45,7 +45,7 @@ beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
-editor = "gedit"
+editor = "nvim"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -93,7 +93,7 @@ end
 -- Create a laucher widget and a main menu
 myawesomemenu = {
    { "manual", terminal .. " -e \"man awesome\"" },
-   { "edit config", editor .. " " .. awesome.conffile },
+   { "edit config", terminal .. " -e \"" .. editor .. " " .. awesome.conffile .. "\"" },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
