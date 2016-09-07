@@ -467,5 +467,5 @@ end
 run_once("xscreensaver -no-splash")
 run_once("nm-applet")
 run_once("ckb -b")
-run_once("steam -silent")
-run_once("discord-canary")
+--run_once("steam -silent")
+--run_once("discord-canary")
