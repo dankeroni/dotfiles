@@ -57,7 +57,6 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
 {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -69,6 +68,7 @@ local layouts =
     --awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
     --awful.layout.suit.magnifier
+    awful.layout.suit.floating,
 }
 -- }}}
 
@@ -217,10 +217,10 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({ modkey, "Control" }, "i", function () awful.util.spawn("xscreensaver-command -lock") end),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("pulseaudio-ctl mute") end),
-    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up") end),
-    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down") end),
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up 2") end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down 2") end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),

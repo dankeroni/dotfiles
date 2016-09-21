@@ -148,4 +148,4 @@ endfunction
 
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-p> :Unite file file_rec buffer file_mru -auto-resize -start-insert<CR>
-nnoremap <C-k> :Unite line -auto-resize -start-insert<CR>
+nnoremap <C-k> :Unite outline line -auto-resize -start-insert<CR>
