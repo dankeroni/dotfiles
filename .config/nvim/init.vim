@@ -123,6 +123,15 @@ call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
 
 call dein#add('maksimr/vim-jsbeautify')
 
+call dein#add('vim-ruby/vim-ruby')
+call dein#add('tpope/vim-rails')
+call dein#add('tpope/vim-bundler')
+call dein#add('tpope/vim-cucumber')
+call dein#add('slim-template/vim-slim')
+call dein#add('tpope/vim-haml')
+call dein#add('skalnik/vim-vroom')
+call dein#add('tpope/vim-endwise')
+
 call dein#end()
 
 filetype plugin indent on
