@@ -91,16 +91,19 @@ end
 
 -- {{{ Menu
 -- Create a laucher widget and a main menu
-myawesomemenu = {
-   { "manual", terminal .. " -e \"man awesome\"" },
-   { "edit config", terminal .. " -e \"" .. editor .. " " .. awesome.conffile .. "\"" },
-   { "restart", awesome.restart },
-   { "quit", awesome.quit }
-}
+--myawesomemenu = {
+--   { "manual", terminal .. " -e \"man awesome\"" },
+--   { "edit config", terminal .. " -e \"" .. editor .. " " .. awesome.conffile .. "\"" },
+--   { "restart", awesome.restart },
+--   { "quit", awesome.quit }
+--}
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+mymainmenu = awful.menu({ items = { --{ "awesome", myawesomemenu, beautiful.awesome_icon },
                                     --{ "Debian", debian.menu.Debian_menu.Debian },
-                                    { "open terminal", terminal }
+                                    --{ "open terminal", terminal }
+                                    { "Shutdown", function () awful.util.spawn("poweroff") end },
+                                    { "Reboot", function () awful.util.spawn("reboot") end },
+                                    { "Sleep", function () awful.util.spawn("systemctl suspend") end }
                                   }
                         })
 
