@@ -99,3 +99,6 @@ if ! [ -f ~/.git_prompt.sh ]; then
     curl -o ~/.git_prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh &> /dev/null
 fi
 . ~/.git_prompt.sh
+
+# added by travis gem
+[ -f /home/dankeroni/.travis/travis.sh ] && source /home/dankeroni/.travis/travis.sh

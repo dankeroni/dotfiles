@@ -7,10 +7,12 @@ syntax on
 set backspace=2
 set tabstop=4
 set shiftwidth=4
+set smartindent
 set expandtab
 set ignorecase
 set smartcase
 set hidden
+set showcmd
 
 fu! FixGer()
     silent %s/å/\&aring;/g
@@ -65,7 +67,7 @@ call dein#add('tpope/vim-fugitive.git')
 call dein#add('notpratheek/vim-luna')
 call dein#add('fatih/vim-go')
 call dein#add('Shougo/deoplete.nvim')
-call dein#add('zchee/deoplete-go', {'build': 'make'})
+call dein#add('zchee/deoplete-go')
 call dein#add('zchee/deoplete-jedi')
 call dein#add('nsf/gocode', {'rtp': "nvim"})
 call dein#add('garyburd/go-explorer')
@@ -132,6 +134,13 @@ call dein#add('tpope/vim-haml')
 call dein#add('skalnik/vim-vroom')
 call dein#add('tpope/vim-endwise')
 
+call dein#add('moll/vim-node')
+call dein#add('godlygeek/tabular')
+call dein#add('walm/jshint.vim')
+
+call dein#add('artur-shaik/vim-javacomplete2')
+call dein#add('tfnico/vim-gradle')
+
 call dein#end()
 
 filetype plugin indent on
@@ -141,7 +150,6 @@ if dein#check_install()
   let pluginsExist=1
 endif
 "End dein Scripts-------------------------
-set smartindent
 colo luna-term
 let g:deoplete#enable_at_startup = 1
 
@@ -158,3 +166,7 @@ endfunction
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-p> :Unite file file_rec buffer file_mru -auto-resize -start-insert<CR>
 nnoremap <C-k> :Unite outline line -auto-resize -start-insert<CR>
+
+let mapleader = "m"
+nmap <Leader>j J
+nmap <Leader>k i<Enter><Esc>
