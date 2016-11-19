@@ -25,7 +25,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -102,3 +102,9 @@ fi
 
 # added by travis gem
 [ -f /home/dankeroni/.travis/travis.sh ] && source /home/dankeroni/.travis/travis.sh
+
+shopt -s cdspell
+shopt -s direxpand
+shopt -s dirspell
+shopt -s mailwarn
+shopt -s xpg_echo

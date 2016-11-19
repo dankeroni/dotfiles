@@ -139,6 +139,7 @@ call dein#add('godlygeek/tabular')
 call dein#add('walm/jshint.vim')
 
 call dein#add('artur-shaik/vim-javacomplete2')
+call dein#add('pangloss/vim-javascript')
 call dein#add('tfnico/vim-gradle')
 
 call dein#end()

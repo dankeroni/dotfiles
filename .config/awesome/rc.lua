@@ -103,7 +103,7 @@ mymainmenu = awful.menu({ items = { --{ "awesome", myawesomemenu, beautiful.awes
                                     --{ "open terminal", terminal }
                                     { "Shutdown", function () awful.util.spawn("poweroff") end },
                                     { "Reboot", function () awful.util.spawn("reboot") end },
-                                    { "Sleep", function () awful.util.spawn("systemctl suspend") end }
+                                    { "Sleep", function () awful.util.spawn("xscreensaver-command -lock") awful.util.spawn("systemctl suspend") end }
                                   }
                         })
 
@@ -469,6 +469,6 @@ end
 run_once("xscreensaver -no-splash")
 run_once("nm-applet")
 --run_once("ckb -b")
-run_once("compton --config /home/dankeroni/.config/compton.conf -b")
+--run_once("compton --config /home/dankeroni/.config/compton.conf -b")
 --run_once("steam -silent")
 --run_once("discord-canary")
