@@ -467,7 +467,7 @@ function run_once(cmd)
 end
 
 run_once("xscreensaver -no-splash")
-run_once("nm-applet")
+--run_once("nm-applet")
 --run_once("ckb -b")
 --run_once("compton --config /home/dankeroni/.config/compton.conf -b")
 --run_once("steam -silent")
