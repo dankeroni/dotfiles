@@ -1,6 +1,8 @@
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::")
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export PATH=$PATH:~/Android/Sdk/ndk-bundle
+export ANDROID_HOME=~/Android/Sdk
 export GOPATH=$HOME/git/go
 export PATH=$PATH:$GOPATH/bin
 export GPG_TTY=$(tty)

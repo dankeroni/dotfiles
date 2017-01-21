@@ -3,17 +3,7 @@ alias vim="vim -p"
 alias cv="cd -P"
 alias qwer="youtube-dl -f bestvideo+140"
 alias ssh-fingerprint="ssh-keygen -l -f"
-fu() {
-    echo "------------------------"
-    echo "ARCH & AUR"
-    pacaur -Syu
-    echo "------------------------"
-    echo "NPM"
-    sudo npm update -g
-    echo "------------------------"
-    echo "PIP"
-    pip list --outdated --format=legacy | sed 's/(.*//g' | xargs -n1 sudo pip install -U
-}
+
 asdf() {
     if [ "$2" ]; then
         quality="$2"
