@@ -13,6 +13,9 @@ set ignorecase
 set smartcase
 set hidden
 set showcmd
+set mouse=a
+set splitbelow
+set splitright
 
 fu! FixGer()
     silent %s/å/\&aring;/g
@@ -70,7 +73,7 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('zchee/deoplete-go')
 call dein#add('zchee/deoplete-jedi')
 call dein#add('nsf/gocode', {'rtp': "nvim"})
-call dein#add('garyburd/go-explorer')
+call dein#add('joshuarubin/go-explorer')
 call dein#add('jiangmiao/auto-pairs')
 
 call dein#add('elzr/vim-json', {'on_ft': 'json'})
@@ -142,6 +145,12 @@ call dein#add('artur-shaik/vim-javacomplete2')
 call dein#add('pangloss/vim-javascript')
 call dein#add('tfnico/vim-gradle')
 
+call dein#add('notpratheek/vim-luna')
+
+call dein#add('vim-scripts/MatlabFilesEdition')
+call dein#add('vim-scripts/matchit.zip')
+call dein#add('daeyun/vim-matlab')
+
 call dein#end()
 
 filetype plugin indent on
@@ -171,3 +180,5 @@ nnoremap <C-k> :Unite outline line -auto-resize -start-insert<CR>
 let mapleader = "m"
 nmap <Leader>j J
 nmap <Leader>k i<Enter><Esc>
+
+let g:matlab_server_split = 'horizontal'

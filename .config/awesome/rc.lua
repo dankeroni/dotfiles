@@ -239,19 +239,21 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    -- Custom
-    awful.key({ modkey, "Control" }, "i", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({modkey, "Control"}, "i", function () awful.util.spawn("xscreensaver-command -lock") end),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("pulseaudio-ctl mute") end),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up 2") end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down 2") end),
-    --
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({modkey}, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    awful.key({modkey}, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    awful.key({modkey}, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
+    awful.key({modkey}, "Tab",  awful.tag.viewnext,
+              {description = "view next", group = "tag"}),
+    awful.key({modkey, "Shift"}, "Tab",  awful.tag.viewprev,
+              {description = "view next", group = "tag"}),
+    awful.key({modkey}, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
     awful.key({ modkey,           }, "j",
@@ -559,4 +561,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- {{{ Startup
 run_once("xscreensaver -no-splash")
+run_once("start-pulseaudio-x11")
 -- }}}

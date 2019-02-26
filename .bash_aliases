@@ -10,8 +10,9 @@ asdf() {
     else
         quality="best"
     fi
-    xdg-open "https://www.twitch.tv/"$1"/chat" &>/dev/null &
-    livestreamer twitch.tv/"$1" "$quality"
+    #xdg-open "https://www.twitch.tv/"$1"/chat" &>/dev/null &
+    chromium --app="https://www.twitch.tv/"$1"/chat" &>/dev/null &
+    streamlink -a="--qt-minimal-view {filename}" twitch.tv/"$1" "$quality"
 }
 
 # enable color support of ls and also add handy aliases
