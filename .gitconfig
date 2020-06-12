@@ -31,3 +31,5 @@
     up = "fetch upstream"
 [github]
     user = dankeroni
+[pull]
+	rebase = false

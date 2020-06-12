@@ -125,6 +125,8 @@ call dein#add('tfnico/vim-gradle')
 
 call dein#add('notpratheek/vim-luna')
 
+call dein#add('vim-scripts/vim-auto-save')
+
 call dein#end()
 
 
@@ -147,14 +149,22 @@ let NERDTreeShowHidden=1
 autocmd VimEnter * map <C-n> :NERDTreeToggle<CR>
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 tnoremap <Esc> <C-\><C-n>
-nnoremap <C-p> :Unite file file_rec buffer file_mru -auto-resize -start-insert<CR>
-nnoremap <C-k> :Unite outline line -auto-resize -start-insert<CR>
+
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 let mapleader = "m"
 nmap <Leader>j J
 nmap <Leader>k i<Enter><Esc>
 
-let g:matlab_server_split = 'horizontal'
-au BufWrite * :Autoformat
+autocmd BufWrite * :Autoformat
+
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+let g:auto_save_silent = 1
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete

@@ -1,4 +1,6 @@
-export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::")
+#!/bin/bash
+
+#export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::")
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH=$PATH:~/Android/Sdk/ndk-bundle

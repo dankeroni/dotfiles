@@ -11,7 +11,7 @@ for directory in "${directories[@]}"; do
 done
 
 for file in "${files[@]}"; do
-    ln -s `pwd`/$file ~/$file
+    ln -sf `pwd`/$file ~/$file
 done
 
 ln -s /usr/share/icons/Breeze_Snow/cursors ~/.icons/default/cursors
