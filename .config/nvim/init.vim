@@ -122,8 +122,7 @@ call dein#add('walm/jshint.vim')
 call dein#add('artur-shaik/vim-javacomplete2')
 call dein#add('pangloss/vim-javascript')
 call dein#add('tfnico/vim-gradle')
-
-call dein#add('notpratheek/vim-luna')
+call dein#add('eliba2/vim-node-inspect')
 
 call dein#add('vim-scripts/vim-auto-save')
 
@@ -161,10 +160,13 @@ let mapleader = "m"
 nmap <Leader>j J
 nmap <Leader>k i<Enter><Esc>
 
-autocmd BufWrite * :Autoformat
+"autocmd BufWrite * :Autoformat
+autocmd FileType md,yaml let b:autoformat_autoindent=0
 
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
 
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+let g:nodeinspect_start_repl = 0

@@ -6,13 +6,9 @@
     name = dankeroni
     email = theofpanagiotis@gmail.com
     signingkey = B0B5B8CF
-[gui]
-[gui]
-[gui]
-[gui]
-[gui]
 [push]
     default = simple
+    recurseSubmodules = check
 [core]
     editor = nvim
 [core]
@@ -21,7 +17,7 @@
 [commit]
     gpgsign = true
 [web]
-    browser = chrome
+    browser = firefox
 [alias]
     st = "status"
     df = "diff"
@@ -32,4 +28,4 @@
 [github]
     user = dankeroni
 [pull]
-	rebase = false
+    rebase = false
