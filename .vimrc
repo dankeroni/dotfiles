@@ -48,7 +48,7 @@ endif
 
 "End dein Scripts-------------------------
 filetype plugin indent on
-colo luna-term
+colo slate
 
 "Clear search highlights
 autocmd VimEnter * nnoremap <C-l> :noh<CR>
