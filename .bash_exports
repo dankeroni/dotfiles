@@ -4,6 +4,7 @@
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$(ruby -e 'print Gem.user_dir' 2>/dev/null)/bin:$PATH"
 export PATH=$PATH:~/Android/Sdk/ndk-bundle
+export PATH=$PATH:~/.yarn/bin
 export ANDROID_HOME=~/Android/Sdk
 export GOPATH=$HOME/git/go
 export PATH=$PATH:$GOPATH/bin

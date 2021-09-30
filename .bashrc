@@ -108,3 +108,5 @@ shopt -s direxpand
 shopt -s dirspell
 shopt -s mailwarn
 shopt -s xpg_echo
+
+command -v keychain >/dev/null 2>&1 && eval `keychain --quiet --eval --agents ssh id_rsa`
