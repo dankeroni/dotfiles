@@ -109,4 +109,4 @@ shopt -s dirspell
 shopt -s mailwarn
 shopt -s xpg_echo
 
-command -v keychain >/dev/null 2>&1 && eval `keychain --quiet --eval --agents ssh id_rsa`
+command -v keychain >/dev/null 2>&1 && eval `keychain --quiet --eval --agents gpg,ssh id_rsa 684A3B5959CA84E51CC61E86BBE351DDB0B5B8CF`
