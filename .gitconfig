@@ -21,7 +21,7 @@
 [alias]
     st = "status"
     df = "diff"
-    co = "!command -v commit >/dev/null 2>&1 || yarn global add @commitlint/{cli,config-conventional,prompt-cli} && commit"
+    co = "!command -v commit >/dev/null 2>&1 || yarn global add @commitlint/cli @commitlint/config-conventional @commitlint/prompt-cli && commit"
     cl = "clone --recursive"
     flog = "log -p --follow"
     up = "fetch upstream"
