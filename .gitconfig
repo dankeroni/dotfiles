@@ -15,7 +15,7 @@
     autocrlf = input
     excludesfile = ~/.gitignore
 [commit]
-    gpgsign = true
+    gpgsign = false
 [web]
     browser = firefox
 [alias]

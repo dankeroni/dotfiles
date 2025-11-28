@@ -171,7 +171,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 let g:nodeinspect_start_repl = 0
 
-packadd termdebug
+packadd! termdebug
 let g:termdebug_wide = 1
 map <F5> :silent make \| Run<CR>
 
