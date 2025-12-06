@@ -109,20 +109,5 @@ shopt -s dirspell
 shopt -s mailwarn
 shopt -s xpg_echo
 
-command -v keychain >/dev/null 2>&1 && eval `keychain --quiet --eval --agents gpg,ssh id_ecdsa 684A3B5959CA84E51CC61E86BBE351DDB0B5B8CF`
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/dankeroni/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/dankeroni/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/dankeroni/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/dankeroni/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+command -v keychain >/dev/null 2>&1 && eval `keychain --quiet --eval id_ed25519 684A3B5959CA84E51CC61E86BBE351DDB0B5B8CF`
 
