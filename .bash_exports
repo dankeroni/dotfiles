@@ -10,3 +10,10 @@ export GOPATH=$HOME/git/go
 export PATH=$PATH:$GOPATH/bin
 export GPG_TTY=$(tty)
 export EDITOR=nvim
+export MAMBA_ROOT_PREFIX=/home/dankeroni/miniforge3
+
+export MOZ_ENABLE_WAYLAND=1
+export XDG_SESSION_TYPE=wayland
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
